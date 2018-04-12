@@ -1,0 +1,33 @@
+1,图片验证码
+描述：用来生成图片验证码
+URL:/api/imagecode?codeid=123pcodeid=
+method:get
+传入参数:codeid
+名称      类型       说明              是否必须
+codeid    int       验证码编号            是
+pcodeid   int       上一个验证码编号       是
+
+
+返回值：图片二进制数据
+
+2 发送短信验证码
+
+URL：/api/phonecode
+method:post
+传入参数：json
+名称              类型      说明          是否必须
+mobile           string                   是
+image_code_id    string                     是
+image_code_text  string                  是
+
+{
+    "mobile":"18792718056",
+    "image_code_id":"uuid()",
+    "image_code_text":"waxr"
+}
+
+返回值：
+{
+    "errorno":0,
+    "errmsg":"ok",
+}
